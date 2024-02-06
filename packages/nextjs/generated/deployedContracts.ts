@@ -30,7 +30,7 @@ const contracts = {
           ],
         },
         Staker: {
-          address: "0xf953b3A269d80e3eB0F2947630Da976B896A8C5b",
+          address: "0xAA292E8611aDF267e563f334Ee42320aC96D0463",
           abi: [
             {
               inputs: [
@@ -62,11 +62,6 @@ const contracts = {
                 },
               ],
               name: "Err__Threshold__and__Time__Failed",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "Err__Transfer__Failed",
               type: "error",
             },
             {
@@ -236,7 +231,7 @@ const contracts = {
           ],
         },
         Staker: {
-          address: "0xAF485693347A1D5b1504006C383e3594502921Ea",
+          address: "0x57e52dA689c894D866Ff5881F9c736624968047A",
           abi: [
             {
               inputs: [
