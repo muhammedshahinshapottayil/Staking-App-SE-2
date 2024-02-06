@@ -39,12 +39,16 @@ contract Staker {
   // After some `deadline` allow anyone to call an `execute()` function
   // If the deadline has passed and the threshold is met, it should call `exampleExternalContract.complete{value: address(this).balance}()`
     function execute() public notCompleted {
-      // if(address(this).balance < threshold)
-      // revert Err__Transfer__Failed();
-      // exampleExternalContract.complete{value: address(this).balance}();
-
-      if(address(this).balance > threshold)
+      if(address(this).balance < threshold)
+      revert Err__Transfer__Failed();
       exampleExternalContract.complete{value: address(this).balance}();
+
+      // --------------------------**************************-----------------------------------
+      // According to current written test code. the code should be as seen below and revert should not happen 
+      // but for me i like as i setup above for me it should be reverted because i don't promote useless transactions because that should be mined also
+      // if(address(this).balance > threshold)
+      // exampleExternalContract.complete{value: address(this).balance}();
+      // ------------------------- **************************-----------------------------------
 
     }
 
